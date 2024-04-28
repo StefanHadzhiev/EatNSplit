@@ -92,15 +92,28 @@ function Friend({ friend }) {
 }
 
 function FormAddFriend() {
+  const [name, setName] = useState("");
+  const [image, setImage] = useState("");
+
+  function handleAdd(friendName, balance) {}
+
   return (
     <form className="form-add-friend">
       <label>🤼 Friend name </label>
-      <input type="text"></input>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      ></input>
 
       <label>🖼️ Image Url </label>
-      <input type="text"></input>
+      <input
+        type="text"
+        value={image}
+        onChange={(e) => setImage(e.target.value)}
+      ></input>
 
-      <Button>Add</Button>
+      <Button onClick={handleAdd}>Add</Button>
     </form>
   );
 }
